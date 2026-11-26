@@ -24,7 +24,7 @@ MAX_CHARS = 140
 def main() -> int:
     excuse = EXCUSE
 
-    # Validate: single line, 1-140 characters, not only whitespace.
+    # The line must be one line, 1-140 chars, with no surrounding spaces.
     if not excuse or excuse != excuse.strip():
         print("error: excuse must not be empty or padded with whitespace", file=sys.stderr)
         return 1
